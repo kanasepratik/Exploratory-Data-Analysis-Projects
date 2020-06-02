@@ -1,0 +1,25 @@
+Connect/Follow me on LinkedIn for more updates on interesting dataset like this. Thanks.
+
+Context
+To better understand the imports and exports by India and how it changed in 3 years.
+
+Content
+Import and export data available by principle commodity and country wise for 3 years from Apr'2014 to Mar'2017.
+
+Column Descriptions
+pc_code: Integer, Principal Commodity Code
+pc: String, Principal Commodity Name
+unit: String, measurement of quantity
+country_code: Integer, country code
+country_name: String, country name
+quantity: Integer, quantify of export or import
+value: Integer, monetary valeu of the quantity (in million USD)
+Acknowledgements
+Ministry of Commerce and Industry, Govt of India has published these datasets in Open Govt Data Platform India portal under Govt. Open Data License - India.
+
+Inspiration
+Some of questions I would like to be answered are
+
+Top countries by growth percentage.
+Top commodity by quantity or value.
+YoY growth of export and import.
