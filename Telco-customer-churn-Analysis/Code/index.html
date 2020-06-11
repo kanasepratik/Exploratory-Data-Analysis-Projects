@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+<style>
+div {
+    height: 1200px;
+    background: linear-gradient(to top, #33ccff 0%, #ff99cc 100%)
+}
+</style>
+
+ <div class="login">
+     <h1 style="text-align:center;background-color:DodgerBlue;font-family:verdana;font-size:30px; background-color:#c2d4dd;">Predict behavior to retain customers !</h1>
+
+     <h1 style="text-align:center;background-color:DodgerBlue;font-family:verdana; background-color:#c2d4dd;font-size:25px ">Predict Whether the customer churned or not</h1>
+<br>
+     <h1 style="text-align:center;font-family:verdana;background-color:#ddeedd;font-size:15px;">Please Enter the Correct Information Related with the Customers
+     <br>After Entering the Details Click on Predict Button</h1>
+
+<br>
+<br>
+
+
+
+     <!-- Main Input For Receiving Query to our ML -->
+<dd>
+    <form action="{{ url_for('predict')}}"method="post">
+<dd>
+    <dd>
+
+        <dd><dd><li><label for="gender">Gender:</label>
+     <br>
+     <br>
+    	<input type="text" name="gender" size="80" placeholder=" Enter For, Female: 0 ,Male: 1" required="required" />
+<br>
+<br>
+        <li><label for="tenure">Tenure:</label>
+      <br>
+     <br>
+        <input type="text" name="tenure" size="80" placeholder="Number of months the customer has stayed with the company, for eg.(1,20,30,40)" required="required" />
+<br>
+<br>
+        <li><label for="MultipleLines">MultipleLines:</label>
+       <br>
+     <br>
+		<input type="text" name="MultipleLines" size="80" placeholder="Enter For, 0:No , For No phone service: 1, Yes :2" required="required" />
+<br>
+<br>
+        <li><label for="Power_bhp">OnlineSecurity:</label>
+        <br>
+     <br>
+        <input type="text" name="OnlineSecurity" size=80 placeholder="Enter For, 0:No , For No phone service: 1, Yes :2" required="required" />
+<br>
+<br>
+        <li><label for="OnlineBackup">OnlineBackup:</label>
+            <br>
+     <br>
+        <input type="text" name="OnlineBackup" size=80 placeholder="Enter For, 0:No , For No phone service: 1, Yes :2"  required="required" />
+        <br>
+<br>
+<br>
+        <li><label for="TechSupport">TechSupport:</label>
+            <br>
+     <br>
+        <input type="text" name="TechSupport" size=80 placeholder="Enter For, 0:No , For No phone service: 1, Yes :2"  required="required" />
+<br>
+<br>
+         <li><label for="Contract">Contract:</label>
+            <br>
+     <br>
+        <input type="text" name="Contract" size=80 placeholder="Enter For, Month-to-month :0, For One year: 1, For Two year : 2" required="required" />
+<br>
+<br>
+         <li><label for="PaymentMethod">PaymentMethod:</label>
+            <br>
+     <br>
+        <input type="text" name="PaymentMethod" size=80 placeholder="Enter For, Bank transfer: 0, Credit card: 1, Electronic check: 2, Mailed check: 3" required="required" />
+<br>
+<br>
+         <li><label for="MonthlyCharges">MonthlyCharges:</label>
+            <br>
+     <br>
+        <input type="text" name="MonthlyCharges" size=80 placeholder="Enter Value, For eg.29,50,80,90" required="required" />
+<br>
+<br>
+         <li><label for="TotalCharges">TotalCharges:</label>
+            <br>
+     <br>
+        <input type="text" name="TotalCharges" size="80" placeholder="Enter ValueFor eg.1000,200,500,700" required="required" />
+<br>
+
+<br>
+<br><dd>
+        <br><button type="submit" size=80 class="btn btn-primary btn-block btn-large">Predict Churn</button>
+    </form>
+
+   <br>
+   <br>
+
+     <h2 style="text-align:center;background-color:#f0efef;">{{ prediction_text }}</h2>
+
+
+ </div>
+ <h1 style="text-align:center;font-family:verdana;background-color:#ddeedd;font-size:15px;">If the Cutomer is Churned, Then Customer may stop using Service
+     <br>If Customer is not Churned, then Customer is going to continue the service</h1>
+</body>
+</html>
