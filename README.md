@@ -66,7 +66,7 @@ It involves observation and analysis of more than one statistical outcome variab
 
 
 
-## EDA Project in this Repository
+## EDA Projects in this Repository
 
 - #### [Black Friday Data Analysis](https://github.com/kanasepratik/Exploratory-Data-Analysis-Projects_1/tree/master/Black%20Friday%20Data%20Analysis)
 
